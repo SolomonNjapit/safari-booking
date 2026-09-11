@@ -6,11 +6,27 @@ if (bookingForm) {
   bookingForm.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    // Basic front-end validation check (browser's required attributes already help here)
-    formStatus.textContent = "Thank you! Your booking request has been received. We'll be in touch shortly.";
-    formStatus.className = 'form-status success';
+    const formData = new FormData(bookingForm);
 
-    bookingForm.reset();
+    fetch(bookingForm.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    })
+      .then(response => {
+        if (response.ok) {
+          formStatus.textContent = "Thank you! Your booking request has been received.";
+          formStatus.className = 'form-status success';
+          bookingForm.reset();
+        } else {
+          formStatus.textContent = "Something went wrong. Please try again or contact us directly.";
+          formStatus.className = 'form-status error';
+        }
+      })
+      .catch(() => {
+        formStatus.textContent = "Something went wrong. Please check your connection and try again.";
+        formStatus.className = 'form-status error';
+      });
   });
 }
 // Mobile menu toggle
