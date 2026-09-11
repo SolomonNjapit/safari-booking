@@ -517,3 +517,79 @@ section, footer {
   width: 32px;
   height: 32px;
 }
+#about-founder {
+  padding: 70px 24px;
+  background: #ffffff;
+}
+.tbj-founder-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.tbj-founder-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+.tbj-founder-text {
+  flex: 1;
+  min-width: 260px;
+}
+.tbj-founder-text h2 {
+  color: #2E4A2E;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+.tbj-founder-text p {
+  color: #4a4a40;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+#policy {
+  padding: 70px 24px;
+  background: #FAF6EF;
+  text-align: center;
+}
+#policy h2 {
+  color: #2E4A2E;
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+}
+.tbj-policy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+.tbj-policy-item {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+.tbj-policy-item h3 {
+  color: #C1622A;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+.tbj-policy-item p {
+  color: #4a4a40;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.tbj-founder-wrap {
+  justify-content: center;
+  text-align: center;
+}
+.tbj-founder-text {
+  max-width: 650px;
+}
